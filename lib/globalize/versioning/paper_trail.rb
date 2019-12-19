@@ -24,7 +24,7 @@ ActiveRecord::Base.class_eval do
 end
 
 # to handle different versions of paper_trail
-version_class = PaperTrail::GLOBALIZE_VERSION_CLASS_NAME || PaperTrail::VERSION.is_a?(String) ? Version : PaperTrail::Version
+version_class = PaperTrail::GLOBALIZE_VERSION_CLASS_NAME || (PaperTrail::VERSION.is_a?(String) ? Version : PaperTrail::Version)
 
 version_class.class_eval do
 
